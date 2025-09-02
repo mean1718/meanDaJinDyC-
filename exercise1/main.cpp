@@ -1,4 +1,4 @@
-#include "book.cpp"
+#include "book.exe"
 
 int main() {
     // Create two Book objects

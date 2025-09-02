@@ -1,0 +1,48 @@
+#ifndef BANKACCOUNT_EXE
+#define BANKACCOUNT_EXE
+ 
+#include <iostream>
+#include <string>
+
+class bankAccount {
+private:
+    std::string accountHolderName;
+    double balance;
+
+public:
+    // Constructor
+    bankAccount(std::string name, double initialBalance) {
+        accountHolderName = name;
+        balance = initialBalance;
+    }
+
+    // Deposit method
+    void deposit(double amount) {
+        if (amount < 0) {
+            std::cout << " Error: Cannot deposit a negative amount.\n";
+        } else {
+            balance += amount;
+            std::cout << " Deposited $" << amount << " successfully.\n";
+        }
+    }
+
+    // Withdraw method
+    void withdraw(double amount) {
+        if (amount < 0) {
+            std::cout << " Error: Cannot withdraw a negative amount.\n";
+        } else if (amount > balance) {
+            std::cout << " Error: Insufficient funds.\n";
+        } else {
+            balance -= amount;
+            std::cout << " Withdrawn $" << amount << " successfully.\n";
+        }
+    }
+
+    // Display balance method
+    void displayBalance() const {
+        std::cout << " Account Holder: " << accountHolderName << "\n";
+        std::cout << " Current Balance: $" << balance << "\n\n";
+    }
+};
+
+#endif

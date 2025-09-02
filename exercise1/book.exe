@@ -1,5 +1,5 @@
-#ifndef BOOK_HPP
-#define BOOK_HPP
+#ifndef BOOK_EXE
+#define BOOK_EXE
 
 #include <iostream>
 #include <string>

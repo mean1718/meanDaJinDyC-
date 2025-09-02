@@ -1,0 +1,30 @@
+#ifndef BOOK_HPP
+#define BOOK_HPP
+
+#include <iostream>
+#include <string>
+
+class Book {
+private:
+    std::string title;
+    std::string author;
+    int pages;
+
+public:
+    // Constructor
+    Book(std::string t, std::string a, int p) {
+        title = t;
+        author = a;
+        pages = p;
+    }
+
+    // Display method
+    void display() const {
+        std::cout << "Book Details:\n";
+        std::cout << "Title : " << title << "\n";
+        std::cout << "Author: " << author << "\n";
+        std::cout << "Pages : " << pages << "\n\n";
+    }
+};
+
+#endif
